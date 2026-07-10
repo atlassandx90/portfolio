@@ -138,6 +138,7 @@ window.addEventListener("scroll", () => {
 // =============================
 
 const progressBar = document.getElementById("progress-bar");
+const progressDot = document.querySelector(".progress-dot");
 
 window.addEventListener("scroll", () => {
 
@@ -152,6 +153,7 @@ window.addEventListener("scroll", () => {
         (scrollTop / scrollHeight) * 100;
 
     progressBar.style.width = progress + "%";
+    progressDot.style.left = progress + "%";
 
 });
 
