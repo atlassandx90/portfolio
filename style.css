@@ -74,31 +74,7 @@ body::before{
       SCROLL PROGRESS BAR
 =============================*/
 
-#progress-bar{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:0%;
-
-    height:4px;
-
-    background:var(--accent);
-
-    z-index:99999;
-
-    transition:width .08s linear;
-
-    box-shadow:
-        0 0 8px var(--accent),
-        0 0 18px var(--accent);
-
-}
-
-.progress-glow{
+.progress-wrapper{
 
     position:fixed;
 
@@ -110,9 +86,37 @@ body::before{
 
     height:4px;
 
+    z-index:99999;
+
     pointer-events:none;
 
-    z-index:99998;
+}
+
+#progress-bar{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:0;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #8B5CF6,
+        #A855F7,
+        #C084FC
+    );
+
+    box-shadow:
+        0 0 10px #8B5CF6,
+        0 0 25px #8B5CF6,
+        0 0 45px #8B5CF6;
+
+    transition:width .08s linear;
 
 }
 
@@ -120,26 +124,27 @@ body::before{
 
     position:absolute;
 
-    left:0;
-
     top:50%;
 
-    width:16px;
+    left:0;
 
-    height:16px;
+    width:18px;
+
+    height:18px;
 
     border-radius:50%;
 
-    background:var(--accent);
+    background:white;
 
     transform:translate(-50%,-50%);
 
     box-shadow:
-    0 0 10px var(--accent),
-    0 0 25px var(--accent),
-    0 0 50px var(--accent);
+        0 0 10px #fff,
+        0 0 20px #8B5CF6,
+        0 0 40px #8B5CF6,
+        0 0 70px #8B5CF6;
 
-    transition:left .05s linear;
+    transition:left .08s linear;
 
 }
 
