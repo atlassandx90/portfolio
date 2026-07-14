@@ -50,7 +50,7 @@ content="website">
 </head>
 
 <body>
-
+<div class="cursor-glow"></div>
 <div class="progress-wrapper">
 
     <div id="progress-bar"></div>
@@ -165,7 +165,7 @@ content="website">
 
     <!-- About -->
     <section id="about" class="about"
-     data-aos="fade-up">
+     data-aos="fade-right">
 
     <div class="about-container">
 
@@ -214,6 +214,31 @@ content="website">
     </div>
 
 </section>
+
+<div class="stats-grid">
+
+    <div class="stat-card">
+        <h2 class="counter" data-target="3">0</h2>
+        <p>Analytics Projects</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 class="counter" data-target="5">0</h2>
+        <p>Certifications</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 class="counter" data-target="8">0</h2>
+        <p>Core Skills</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 class="counter" data-target="6">0</h2>
+        <p>Months Experience</p>
+    </div>
+
+</div>
+
 
     <!-- Skills -->
     <section id="skills" class="skills"
@@ -280,7 +305,7 @@ content="website">
      ========================= -->
 
      <section id="projects" class="projects"
-     data-aos="fade-up">
+     data-aos="zoom-in-up">
 
     <div class="projects-header">
 
@@ -627,13 +652,22 @@ content="website">
     
 
     <!-- Experience -->
+
 <section id="experience" class="experience"
-   data-aos="fade-up">
+   data-aos="fade-left">
 
     <div class="section-header">
-        <span class="section-tag">Professional Experience</span>
-        <h2>Experience</h2>
-        <p>Real-world analytics experience working with business data, dashboards and predictive models.</p>
+
+        <h2 class="section-title">
+            Professional Experience
+        </h2>
+        <p class="projects-subtitle">
+            Real-world analytics experience working with
+            <span>business data</span>,
+            <span>dashboards</span> and
+            <span>predictive models</span>.
+        </p>
+
     </div>
 
     <div class="experience-card">
@@ -945,7 +979,7 @@ data-aos="fade-up">
 
     <!-- Contact -->
 <section id="contact" class="contact"
-data-aos="fade-up">
+data-aos="zoom-in">
 
     <div class="section-header">
         <span class="section-badge">Get In Touch</span>
@@ -1137,7 +1171,7 @@ data-aos="fade-up">
 
 <script>
 AOS.init({
-    duration:900,
+    duration:1000,
     once:true,
     offset:80,
     easing:"ease-out-cubic"
@@ -1147,4 +1181,13 @@ AOS.init({
 <script src="script.js"></script>
 
 </body>
+<div id="loader">
+
+    <div class="loader-logo">
+
+        AR
+
+    </div>
+
+</div>
 </html>
