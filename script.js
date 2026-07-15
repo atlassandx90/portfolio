@@ -64,20 +64,16 @@ typeEffect();
 // ======================================================
 
 const logo = document.querySelector(".logo");
-const logoLink = document.querySelector(".logo a");
-if(logo){
+
 logo.addEventListener("click", () => {
 
-    logoLink.classList.add("active");
+    logo.classList.add("active");
 
     setTimeout(() => {
-
-        logoLink.classList.remove("active");
-
-    }, 700);
+        logo.classList.remove("active");
+    },700);
 
 });
-}
 
 // ======================================================
 // Accent Color Changer
@@ -343,14 +339,6 @@ observer.unobserve(counter);
 
 counters.forEach(counter=>observer.observe(counter));
 
-const cursorGlow = document.querySelector(".cursor-glow");
-
-document.addEventListener("mousemove", (e) => {
-
-    cursorGlow.style.left = e.clientX + "px";
-    cursorGlow.style.top = e.clientY + "px";
-
-});
 
 window.addEventListener("load",()=>{
 
@@ -386,6 +374,27 @@ magneticButtons.forEach(button => {
 
         button.style.transform = "translate(0,0)";
 
+    });
+
+});
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 500) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show");
+    }
+
+});
+
+scrollBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
     });
 
 });
