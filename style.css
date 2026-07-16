@@ -1502,6 +1502,11 @@ z-index: 1;
 
     font-weight:600;
 
+    background:var(--accent);
+
+    color:white;
+    
+
 }
 
 
