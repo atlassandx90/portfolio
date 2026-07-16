@@ -1,0 +1,996 @@
+
+/* -------------------- TABLET (1400px) -------------------- */
+@media(max-width:1400px){
+
+    .projects-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* -------------------- TABLET (1100px) -------------------- */
+@media(max-width:1100px){
+
+    .certifications-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* -------------------- TABLET (1000px) -------------------- */
+@media(max-width:1000px){
+
+    .project-overview,
+    .workflow-grid,
+    .kpi-grid,
+    .insights-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project-hero h1{
+        font-size:44px;
+    }
+
+    .dashboard-preview h2,
+    .workflow h2,
+    .project-kpi h2,
+    .insights h2{
+        font-size:34px;
+    }
+
+    .project-links{
+        flex-direction:column;
+    }
+
+}
+
+/* -------------------- TABLET (992px) -------------------- */
+@media(max-width:992px){
+
+    .experience-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .social-links{
+        grid-template-columns:1fr;
+    }
+
+    .contact-buttons{
+        flex-direction:column;
+    }
+
+    .contact .section-header h2{
+        font-size:2.4rem;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .footer-about p{
+        max-width:100%;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+/* -------------------- TABLET (900px) -------------------- */
+@media(max-width:900px){
+
+    .projects{
+        padding:100px 25px;
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project-image{
+        height:250px;
+    }
+
+    .projects .section-title{
+        font-size:42px;
+    }
+
+    .projects-subtitle{
+        font-size:18px;
+    }
+
+    .project-content h3{
+        font-size:22px;
+    }
+
+    .project-buttons{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =========================================================
+   MOBILE (768px and below) - MAIN BREAKPOINT
+   ========================================================= */
+@media(max-width:768px){
+
+    /* ---------- STATS ---------- */
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:16px;
+        padding:0 18px;
+    }
+
+    .stat-card{
+        min-height:140px;
+        padding:20px;
+    }
+
+    .stat-card h2{
+        font-size:40px;
+    }
+
+    /* ---------- EXPERIENCE ---------- */
+    .experience-grid{
+        grid-template-columns:1fr;
+        justify-items:center;
+    }
+
+    .experience-item{
+        width:100%;
+        max-width:320px;
+    }
+
+    .experience{
+        padding:90px 7%;
+    }
+
+    .experience-card{
+        padding:30px;
+    }
+
+    .experience-top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .experience-duration{
+        text-align:left;
+    }
+
+    .experience-left h3{
+        font-size:24px;
+    }
+
+    /* ---------- CERTIFICATIONS ---------- */
+    .certifications{
+        padding:80px 6%;
+    }
+
+    .certifications-grid{
+        grid-template-columns:1fr;
+    }
+
+    .certifications .section-header h2{
+        font-size:2.3rem;
+    }
+
+    .certificate-card{
+        padding:28px;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact{
+        padding:90px 6%;
+    }
+
+    .contact-info,
+    .contact-action{
+        padding:25px;
+    }
+
+    .contact-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    /* ---------- NAVBAR / MOBILE MENU (BUG FIX HERE) ---------- */
+    .navbar{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        overflow:visible;       /* FIX: was overflow:hidden in style.css,
+                                    which clipped the fixed nav-links menu */
+        z-index:1000;
+    }
+
+    .menu-toggle{
+        display:block;
+        z-index:1002;
+    }
+
+    .resume-btn{
+        display:none;
+    }
+
+    .nav-links{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:280px;
+        height:100vh;
+        background:#111;
+        display:flex;
+        flex-direction:column;
+        gap:0;
+        transition:.4s;
+        padding-top:110px;      /* pushes links below navbar height instead
+                                    of relying on navbar's clipped box */
+        box-shadow:-10px 0 30px rgba(0,0,0,.4);
+        z-index:1001;
+    }
+
+    .nav-links.active{
+        right:0;
+    }
+
+    .nav-links li{
+        width:100%;
+    }
+
+    .nav-links a{
+        display:block;
+        padding:20px 25px;
+        border-bottom:1px solid rgba(255,255,255,.05);
+        font-size:18px;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero-content{
+        width:100%;
+        overflow:hidden;
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:40px;
+    }
+
+    .hero-image{
+        margin-top:40px;
+        margin-bottom:30px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        order:-1;
+    }
+
+    .image-circle{
+        width:250px;
+        height:250px;
+        margin:0 auto;
+        box-shadow:0 0 30px rgba(139,92,246,.25);
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .hero h1{
+        font-size:58px;
+        line-height:1.05;
+        word-break:break-word;
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .hero p{
+        max-width:100%;
+        margin:auto;
+    }
+
+    /* ---------- ABOUT ---------- */
+    .about-container{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .about-left,
+    .about-right,
+    .about-card{
+        width:100%;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE (600px) -------------------- */
+@media(max-width:600px){
+
+    .contact{
+        padding:90px 6%;
+    }
+
+    .contact-info,
+    .contact-action{
+        padding:25px;
+    }
+
+    .contact-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE (576px) -------------------- */
+@media(max-width:576px){
+
+    .footer{
+        padding:60px 6% 25px;
+    }
+
+    .footer-social{
+        flex-wrap:wrap;
+    }
+
+    .footer-about h2{
+        font-size:2.2rem;
+    }
+
+    .footer-links h3,
+    .footer-tech h3{
+        font-size:1.2rem;
+    }
+
+}
+
+/* -------------------- SCROLL TOP BUTTON (768px) -------------------- */
+@media(max-width:768px){
+
+    #scrollTopBtn{
+        width:48px;
+        height:48px;
+        right:18px;
+        bottom:18px;
+        font-size:18px;
+    }
+
+}
+
+
+/* -------------------- Project Part -------------------- */
+/* ==========================================================*/
+
+
+/* -------------------- TABLET (1400px) -------------------- */
+@media(max-width:1400px){
+
+    .projects-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* -------------------- TABLET (1100px) -------------------- */
+@media(max-width:1100px){
+
+    .certifications-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* -------------------- TABLET (1000px) -------------------- */
+@media(max-width:1000px){
+
+    .project-overview,
+    .workflow-grid,
+    .kpi-grid,
+    .insights-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project-hero h1{
+        font-size:44px;
+    }
+
+    .dashboard-preview h2,
+    .workflow h2,
+    .project-kpi h2,
+    .insights h2{
+        font-size:34px;
+    }
+
+    .project-links{
+        flex-direction:column;
+    }
+
+}
+
+/* -------------------- TABLET (992px) -------------------- */
+@media(max-width:992px){
+
+    .experience-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .social-links{
+        grid-template-columns:1fr;
+    }
+
+    .contact-buttons{
+        flex-direction:column;
+    }
+
+    .contact .section-header h2{
+        font-size:2.4rem;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .footer-about p{
+        max-width:100%;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+/* -------------------- TABLET (900px) -------------------- */
+@media(max-width:900px){
+
+    .projects{
+        padding:100px 25px;
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project-image{
+        height:250px;
+    }
+
+    .projects .section-title{
+        font-size:42px;
+    }
+
+    .projects-subtitle{
+        font-size:18px;
+    }
+
+    .project-content h3{
+        font-size:22px;
+    }
+
+    .project-buttons{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =========================================================
+   MOBILE (768px and below) - MAIN BREAKPOINT
+   ========================================================= */
+@media(max-width:768px){
+
+    /* ---------- STATS ---------- */
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:16px;
+        padding:0 18px;
+    }
+
+    .stat-card{
+        min-height:140px;
+        padding:20px;
+    }
+
+    .stat-card h2{
+        font-size:40px;
+    }
+
+    /* ---------- EXPERIENCE ---------- */
+    .experience-grid{
+        grid-template-columns:1fr;
+        justify-items:center;
+    }
+
+    .experience-item{
+        width:100%;
+        max-width:320px;
+    }
+
+    .experience{
+        padding:90px 7%;
+    }
+
+    .experience-card{
+        padding:30px;
+    }
+
+    .experience-top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .experience-duration{
+        text-align:left;
+    }
+
+    .experience-left h3{
+        font-size:24px;
+    }
+
+    /* ---------- CERTIFICATIONS ---------- */
+    .certifications{
+        padding:80px 6%;
+    }
+
+    .certifications-grid{
+        grid-template-columns:1fr;
+    }
+
+    .certifications .section-header h2{
+        font-size:2.3rem;
+    }
+
+    .certificate-card{
+        padding:28px;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact{
+        padding:90px 6%;
+    }
+
+    .contact-info,
+    .contact-action{
+        padding:25px;
+    }
+
+    .contact-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    /* ---------- NAVBAR / MOBILE MENU (BUG FIX HERE) ---------- */
+    .navbar{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        overflow:visible;       /* FIX: was overflow:hidden in style.css,
+                                    which clipped the fixed nav-links menu */
+        z-index:1000;
+    }
+
+    .menu-toggle{
+        display:block;
+        z-index:1002;
+    }
+
+    .resume-btn{
+        display:none;
+    }
+
+    .nav-links{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:280px;
+        height:100vh;
+        background:#111;
+        display:flex;
+        flex-direction:column;
+        gap:0;
+        transition:.4s;
+        padding-top:110px;      /* pushes links below navbar height instead
+                                    of relying on navbar's clipped box */
+        box-shadow:-10px 0 30px rgba(0,0,0,.4);
+        z-index:1001;
+    }
+
+    .nav-links.active{
+        right:0;
+    }
+
+    .nav-links li{
+        width:100%;
+    }
+
+    .nav-links a{
+        display:block;
+        padding:20px 25px;
+        border-bottom:1px solid rgba(255,255,255,.05);
+        font-size:18px;
+    }
+    
+    /* ---------- HERO ---------- */
+    .hero-content{
+        width:100%;
+        overflow:hidden;
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:40px;
+    }
+
+    .hero-image{
+        margin-top:40px;
+        margin-bottom:30px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        order:-1;
+    }
+
+    .image-circle{
+        width:250px;
+        height:250px;
+        margin:0 auto;
+        box-shadow:0 0 30px rgba(139,92,246,.25);
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .hero h1{
+        font-size:58px;
+        line-height:1.05;
+        word-break:break-word;
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .hero p{
+        max-width:100%;
+        margin:auto;
+    }
+
+    /* ---------- ABOUT ---------- */
+    .about-container{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .about-left,
+    .about-right,
+    .about-card{
+        width:100%;
+    }
+
+}
+
+/* =========================================================
+   PROJECT DETAIL PAGES (walmart / ecommerce / credit-card)
+   MOBILE (768px)
+   ========================================================= */
+@media(max-width:768px){
+
+    /* ---------- HERO ---------- */
+    .project-hero{
+        margin:110px auto 50px;
+        padding:0 6%;
+    }
+
+    .back-btn{
+        margin-bottom:25px;
+    }
+
+    .back-btn a{
+        font-size:14px;
+    }
+
+    .project-label{
+        font-size:12px;
+        padding:8px 16px;
+        margin-bottom:18px;
+    }
+
+    .project-hero h1{
+        font-size:32px;
+        line-height:1.25;
+        margin-bottom:16px;
+    }
+
+    .project-hero p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:28px;
+    }
+
+    .project-tech{
+        gap:10px;
+        margin-bottom:30px;
+    }
+
+    .project-tech span{
+        padding:9px 14px;
+        font-size:13px;
+    }
+
+    .project-tech img{
+        width:16px;
+        height:16px;
+    }
+
+    .project-links{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .project-links a{
+        text-align:center;
+        justify-content:center;
+        padding:10px 20px;
+        font-size:15px;
+    }
+
+    /* ---------- DASHBOARD ---------- */
+    .dashboard-preview{
+        margin:0 auto 60px;
+        padding:0 6%;
+        text-align:center;
+    }
+
+    .dashboard-preview h2{
+        font-size:24px;
+        margin-bottom:18px;
+    }
+
+    .dashboard-preview img{
+
+    width:100%;
+    display:block;
+    margin:0 auto;
+
+    border-radius:20px;
+
+    border:2px solid var(--accent);
+
+    box-shadow:0 20px 60px rgba(139,92,246,.2);
+
+}
+
+    /* ---------- OVERVIEW ---------- */
+    .project-overview{
+        padding:0 6%;
+        gap:18px;
+    }
+
+    .overview-card{
+        padding:22px;
+        border-radius:18px;
+    }
+
+    .overview-card h3{
+        font-size:20px;
+        margin-bottom:14px;
+        text-align:center;
+    }
+
+    .overview-card p,
+    .overview-card ul{
+        font-size:14.5px;
+    }
+
+    /* ---------- WORKFLOW ---------- */
+    .workflow{
+        margin:70px auto;
+        padding:0 6%;
+    }
+
+    .workflow h2{
+        font-size:24px;
+        margin-bottom:25px;
+        text-align:center;
+    }
+
+    .workflow-grid{
+        gap:16px;
+    }
+
+    .workflow-card{
+        padding:22px;
+        border-radius:16px;
+    }
+
+    .workflow-icon{
+        width:52px;
+        height:52px;
+        border-radius:14px;
+        margin-bottom:16px;
+    }
+
+    .workflow-icon i{
+        font-size:22px;
+    }
+
+    .workflow-card h3{
+        font-size:18px;
+    }
+
+    .workflow-card p{
+        font-size:14px;
+    }
+
+    /* ---------- KPI ---------- */
+    .project-kpi{
+        padding:0 6% 60px;
+    }
+
+    .project-kpi h2{
+        font-size:24px;
+        margin-bottom:25px;
+        text-align:center;
+    }
+
+    .kpi-grid{
+        gap:16px;
+    }
+
+    .kpi-card{
+        padding:20px;
+        border-radius:16px;
+        min-height:10px;
+    }
+
+    .kpi-card h3{
+        font-size:32px;
+        margin-bottom:10px;
+    }
+
+    .kpi-card p{
+        font-size:14px;
+    }
+
+    /* ---------- INSIGHTS ---------- */
+    .insights{
+        padding:0 6% 60px;
+    }
+
+    .insights h2{
+        font-size:24px;
+        margin-bottom:25px;
+        text-align:center;
+    }
+
+    .insights-grid{
+        gap:16px;
+    }
+
+    .insight-card{
+        padding:22px;
+        border-radius:16px;
+    }
+
+    .insight-card i{
+        font-size:26px;
+        margin-bottom:14px;
+    }
+
+    .insight-card h3{
+        font-size:18px;
+    }
+
+    .insight-card p{
+        font-size:14px;
+    }
+
+    /* ---------- CTA ---------- */
+    .project-cta{
+        padding:35px 22px;
+        margin:20px 20px;
+        border-radius:22px;
+    }
+
+    .project-cta h2{
+        font-size:22px;
+        margin-bottom:14px;
+    }
+
+    .project-cta p{
+        font-size:14.5px;
+        margin-bottom:28px;
+    }
+
+    .project-cta .project-links{
+        flex-direction:column;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE (600px) -------------------- */
+@media(max-width:600px){
+
+    .contact{
+        padding:90px 6%;
+    }
+
+    .contact-info,
+    .contact-action{
+        padding:25px;
+    }
+
+    .contact-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE (576px) -------------------- */
+@media(max-width:576px){
+
+    .footer{
+        padding:60px 6% 25px;
+    }
+
+    .footer-social{
+        flex-wrap:wrap;
+    }
+
+    .footer-about h2{
+        font-size:2.2rem;
+    }
+
+    .footer-links h3,
+    .footer-tech h3{
+        font-size:1.2rem;
+    }
+
+}
+
+/* -------------------- SCROLL TOP BUTTON (768px) -------------------- */
+@media(max-width:768px){
+
+    #scrollTopBtn{
+        width:48px;
+        height:48px;
+        right:18px;
+        bottom:18px;
+        font-size:18px;
+    }
+
+}
+
+/* -------------------- EXTRA SMALL PHONES (420px) -------------------- */
+@media(max-width:420px){
+
+    .project-hero h1{
+        font-size:26px;
+    }
+
+    .kpi-card h3{
+        font-size:26px;
+    }
+
+    .project-tech span{
+        font-size:12px;
+        padding:8px 12px;
+    }
+
+}
