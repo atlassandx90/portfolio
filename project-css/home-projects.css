@@ -1,6 +1,5 @@
 /* =========================================================
-   PROJECTS SECTION
-   FINAL FLAT DESIGN
+   PROJECTS SECTION — FINAL DESIGN
 ========================================================= */
 
 .projects {
@@ -36,15 +35,17 @@
 
 /* =========================================================
    ALL PROJECT CARDS
-   FLAT — NO 3D
+   FLAT DESIGN — NO 3D
 ========================================================= */
 
 .projects-grid .project-card {
+
     position: relative;
 
     background: #111111;
 
     border: 1px solid rgba(155, 92, 255, 0.85);
+
     border-radius: 20px;
 
     overflow: hidden;
@@ -60,9 +61,8 @@
 }
 
 
-/* Remove every 3D / tilt effect */
-
 .projects-grid .project-card:hover {
+
     transform: none !important;
     rotate: none !important;
 
@@ -73,17 +73,17 @@
 }
 
 
-/* Prevent child elements from creating 3D effect */
-
 .projects-grid .project-card *,
 .projects-grid .project-card *::before,
 .projects-grid .project-card *::after {
+
     transform-style: flat !important;
 }
 
 
 /* =========================================================
-   FLAGSHIP — INSIGHTGPT
+   INSIGHTGPT — FLAGSHIP
+   FULL WIDTH
 ========================================================= */
 
 .projects-grid .featured-project {
@@ -98,6 +98,7 @@
     min-height: 420px;
 
     display: grid;
+
     grid-template-columns: 1.05fr 0.95fr;
 
     align-items: center;
@@ -109,6 +110,7 @@
     background: #111111;
 
     border: 1px solid rgba(155, 92, 255, 0.9);
+
     border-radius: 20px;
 
     overflow: hidden;
@@ -118,7 +120,8 @@
 
 
 /* =========================================================
-   FLAGSHIP IMAGE
+   INSIGHTGPT IMAGE
+   FULL IMAGE — NO CROPPING
 ========================================================= */
 
 .featured-project .project-image {
@@ -145,7 +148,17 @@
 
     display: block;
 
-    object-fit: cover;
+    /*
+       IMPORTANT:
+       InsightGPT ka poora dashboard
+       visible rahega.
+    */
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background: #080808;
 
     transform: none !important;
 
@@ -153,15 +166,14 @@
 }
 
 
-/* Completely disable image zoom */
-
 .featured-project:hover .project-image img {
+
     transform: none !important;
 }
 
 
 /* =========================================================
-   FLAGSHIP CONTENT
+   INSIGHTGPT CONTENT
 ========================================================= */
 
 .featured-project .project-content {
@@ -169,6 +181,7 @@
     padding: 22px 24px 22px 4px;
 
     display: flex;
+
     flex-direction: column;
 
     justify-content: center;
@@ -178,15 +191,14 @@
 
 
 .featured-project-heading {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 10px;
 }
 
-
-/* =========================================================
-   FLAGSHIP TITLE
-========================================================= */
 
 .featured-project .project-content h3 {
 
@@ -253,7 +265,7 @@
 
 
 /* =========================================================
-   NATURAL LANGUAGE FLOW
+   FLOW
 ========================================================= */
 
 .project-flow {
@@ -285,7 +297,7 @@
 
 
 /* =========================================================
-   FLAGSHIP TECH STACK
+   INSIGHTGPT TECH STACK
 ========================================================= */
 
 .featured-project .tech-stack {
@@ -327,7 +339,7 @@
 
 
 /* =========================================================
-   FLAGSHIP BUTTONS
+   INSIGHTGPT BUTTONS
 ========================================================= */
 
 .featured-project .project-buttons {
@@ -381,8 +393,8 @@
 
 
 /* =========================================================
-   OTHER PROJECTS
    WALMART + ECOMMERCE
+   VERTICAL IMAGE + CONTENT
 ========================================================= */
 
 .projects-grid > .project-card:not(.featured-project) {
@@ -395,7 +407,12 @@
 
     display: grid;
 
-    grid-template-columns: 0.9fr 1.1fr;
+    /*
+       LEFT = vertical image
+       RIGHT = text/content
+    */
+
+    grid-template-columns: 0.82fr 1.18fr;
 
     align-items: stretch;
 
@@ -414,10 +431,12 @@
 
 
 /* =========================================================
-   OTHER PROJECT IMAGES
+   WALMART + ECOMMERCE IMAGE
+   VERTICAL / TALL
 ========================================================= */
 
-.projects-grid > .project-card:not(.featured-project) .project-image {
+.projects-grid > .project-card:not(.featured-project)
+.project-image {
 
     width: 100%;
 
@@ -435,7 +454,8 @@
 }
 
 
-.projects-grid > .project-card:not(.featured-project) .project-image img {
+.projects-grid > .project-card:not(.featured-project)
+.project-image img {
 
     width: 100%;
 
@@ -443,15 +463,20 @@
 
     display: block;
 
+    /*
+       Bottom projects:
+       image fills the tall left panel.
+    */
+
     object-fit: cover;
+
+    object-position: center;
 
     transform: none !important;
 
     transition: none !important;
 }
 
-
-/* No image zoom */
 
 .projects-grid > .project-card:not(.featured-project):hover
 .project-image img {
@@ -461,7 +486,7 @@
 
 
 /* =========================================================
-   OTHER PROJECT CONTENT
+   WALMART + ECOMMERCE CONTENT
 ========================================================= */
 
 .projects-grid > .project-card:not(.featured-project)
@@ -508,7 +533,7 @@
 
 
 /* =========================================================
-   PROJECT CATEGORY
+   CATEGORY
 ========================================================= */
 
 .projects-grid > .project-card:not(.featured-project)
@@ -535,7 +560,7 @@
 
 
 /* =========================================================
-   PROJECT YEAR
+   YEAR
 ========================================================= */
 
 .projects-grid .project-year {
@@ -543,6 +568,7 @@
     position: absolute;
 
     top: 16px;
+
     right: 16px;
 
     z-index: 5;
@@ -709,7 +735,7 @@
 
 
 /* =========================================================
-   DISABLE 3D / TILT GLOBALLY INSIDE PROJECT SECTION
+   FORCE REMOVE 3D / TILT
 ========================================================= */
 
 .projects .project-card,
@@ -735,26 +761,34 @@
 @media (max-width: 1050px) {
 
     .projects {
+
         padding-left: 4%;
         padding-right: 4%;
     }
 
+
     .projects-grid {
+
         width: min(100%, 950px);
     }
 
+
     .featured-project .project-content h3 {
+
         font-size: 28px;
     }
 
+
     .featured-project .project-image {
+
         height: 350px;
     }
 
+
     .projects-grid > .project-card:not(.featured-project) {
+
         grid-template-columns: 0.85fr 1.15fr;
     }
-
 }
 
 
@@ -765,12 +799,15 @@
 @media (max-width: 850px) {
 
     .projects-grid {
+
         grid-template-columns: 1fr;
 
         gap: 20px;
     }
 
+
     .projects-grid .featured-project {
+
         grid-column: auto;
 
         grid-template-columns: 1fr;
@@ -780,7 +817,9 @@
         padding: 12px;
     }
 
+
     .featured-project .project-image {
+
         height: auto;
 
         aspect-ratio: 16 / 9;
@@ -788,21 +827,26 @@
         border-radius: 12px;
     }
 
+
     .featured-project .project-content {
+
         padding: 22px 8px 10px;
     }
 
+
     .projects-grid > .project-card:not(.featured-project) {
+
         grid-template-columns: 0.9fr 1.1fr;
 
         min-height: 260px;
     }
 
+
     .projects-grid > .project-card:not(.featured-project)
     .project-image {
+
         min-height: 260px;
     }
-
 }
 
 
@@ -813,21 +857,26 @@
 @media (max-width: 600px) {
 
     .projects {
+
         padding: 65px 16px 80px;
     }
 
+
     .projects-header {
+
         margin-bottom: 30px;
     }
 
+
     .projects-grid {
+
         width: 100%;
 
         gap: 18px;
     }
 
 
-    /* Flagship */
+    /* InsightGPT */
 
     .projects-grid .featured-project {
 
@@ -836,6 +885,7 @@
         border-radius: 16px;
     }
 
+
     .featured-project .project-image {
 
         aspect-ratio: 16 / 10;
@@ -843,10 +893,12 @@
         border-radius: 11px;
     }
 
+
     .featured-project .project-content {
 
         padding: 18px 6px 8px;
     }
+
 
     .featured-project .project-content h3 {
 
@@ -855,12 +907,14 @@
         line-height: 1.2;
     }
 
+
     .featured-project .project-content > p {
 
         font-size: 13px;
 
         line-height: 1.55;
     }
+
 
     .project-flow {
 
@@ -871,10 +925,12 @@
         gap: 6px;
     }
 
+
     .featured-project .tech-stack {
 
         gap: 6px;
     }
+
 
     .featured-project .tech-stack span {
 
@@ -883,12 +939,14 @@
         font-size: 10px;
     }
 
+
     .featured-project .project-buttons {
 
         width: 100%;
 
         gap: 8px;
     }
+
 
     .featured-project .project-buttons a {
 
@@ -913,6 +971,7 @@
         border-radius: 16px;
     }
 
+
     .projects-grid > .project-card:not(.featured-project)
     .project-image {
 
@@ -923,11 +982,13 @@
         aspect-ratio: 16 / 9;
     }
 
+
     .projects-grid > .project-card:not(.featured-project)
     .project-content {
 
         padding: 17px;
     }
+
 
     .projects-grid > .project-card:not(.featured-project)
     .project-content h3 {
@@ -935,18 +996,19 @@
         font-size: 20px;
     }
 
+
     .projects-grid > .project-card:not(.featured-project)
     .project-content p {
 
         font-size: 13px;
     }
 
+
     .projects-grid > .project-card:not(.featured-project)
     .project-buttons {
 
         margin-top: 12px;
     }
-
 }
 
 
@@ -963,15 +1025,16 @@
         display: grid;
     }
 
+
     .featured-project .project-buttons a {
 
         width: 100%;
     }
+
 
     .projects-grid > .project-card:not(.featured-project)
     .project-buttons {
 
         grid-template-columns: 1fr;
     }
-
 }
