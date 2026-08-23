@@ -125,19 +125,20 @@
 ========================================================= */
 
 .featured-project .project-image {
-
-    position: relative;
-
     width: 100%;
-    height: 390px;
+    height: 330px;
 
     overflow: hidden;
 
-    border-radius: 14px;
+    border: 1px solid var(--accent);
+    border-radius: 16px;
 
-    background: #080808;
-
+    background: var(--card-bg);
     transform: none !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -148,21 +149,10 @@
 
     display: block;
 
-    /*
-       IMPORTANT:
-       InsightGPT ka poora dashboard
-       visible rahega.
-    */
+    object-fit: cover;
+    transform: scale(1.035);
 
-    object-fit: contain;
-
-    object-position: center;
-
-    background: #080808;
-
-    transform: none !important;
-
-    transition: none !important;
+    border-radius: 14px;
 }
 
 
