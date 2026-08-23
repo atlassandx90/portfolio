@@ -1,0 +1,66 @@
+/* =========================================
+   FLAGSHIP PROJECT — INSIGHTGPT
+========================================= */
+
+.featured-project {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-project .project-image {
+    width: 100%;
+}
+
+.featured-project .project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.featured-project-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.featured-project-heading h3 {
+    font-size: 30px;
+    line-height: 1.25;
+}
+
+.featured-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    width: fit-content;
+}
+
+.project-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 22px 0;
+    text-align: center;
+}
+
+.project-flow i {
+    font-size: 12px;
+}
+
+.featured-project .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.featured-project .project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
