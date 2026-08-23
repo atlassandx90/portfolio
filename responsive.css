@@ -994,3 +994,50 @@
     }
 
 }
+
+
+/* =========================================================
+   PROJECTS RESPONSIVE FIX
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .featured-project {
+        grid-template-columns: 1fr !important;
+    }
+
+    .featured-project .project-image {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto !important;
+    }
+
+    .featured-project .project-content {
+        padding: 22px !important;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .projects {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .featured-project .project-content h3 {
+        font-size: 23px !important;
+    }
+
+    .featured-project .project-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
