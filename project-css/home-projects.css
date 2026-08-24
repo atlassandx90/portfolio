@@ -800,12 +800,9 @@
 
 
     .projects-grid > .project-card:not(.featured-project) {
-
-        grid-template-columns: 0.9fr 1.1fr;
-        min-height: 350px;
-        height: 350px;
-    }
-
+    grid-template-columns: 0.85fr 1.15fr;
+    min-height: 260px;
+}
 
     .projects-grid > .project-card:not(.featured-project)
     .project-image {
